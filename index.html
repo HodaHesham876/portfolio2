@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hoda's Portfolio</title>
+  <link rel="stylesheet" href="updated_o1.css" />
+  <link rel="stylesheet" href="protfolio/fonts/css/all.min.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Hoda Hesham</div>
+      <div class="links">
+        <div class="link"><a href="#home">Home</a></div>
+        <div class="link"><a href="#about">About</a></div>
+        <div class="link"><a href="#projects">Projects</a></div>
+        <div class="link"><a href="#resume">Resume</a></div>
+        <div class="link contact-btn"><a href="#contact">Contact Me!</a></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <div class="main-container">
+      <div class="image">
+        <img src="protfolio/photo.jpeg" alt="Profile" />
+      </div>
+      <div class="content">
+        <h1>Hey I'm <span>Hoda</span></h1>
+        <div class="typewriter">I'm a <span></span></div>
+        <p>I am a BIS student with a strong interest in front-end development and UI/UX design. I enjoy creating
+          visually appealing and user-friendly websites.</p>
+        <div class="social-links">
+          <a href="https://github.com/HodaHesham876"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.facebook.com/share/1GBuDVtnNm/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/hoda-hesham-0314622b1"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:Hoda.M.Hesham876@gmail.com"><i class="fa-solid fa-at"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="about-container">
+      <h2>About Me</h2>
+      <p>
+        I'm Hoda, a passionate BIS student with a strong interest in front-end development and UI/UX design.
+        I enjoy building interactive, responsive web interfaces using HTML, CSS, and JavaScript.
+        <br><br>
+        I'm currently a trainee at NIT and always looking to learn more in the world of web development.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="projects-container">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="card">
+          <img src="protfolio/Home_page.png" alt="Home_page screenshoot">
+          <h3>Home page with tailwind</h3>
+          <p>A simple home page designed by HTML and tailwind Css.</p>
+          <button class="git_btn">
+            <a href="https://github.com/HodaHesham876/Myrebo1.git" target="_blank">
+              <i class="fa-brands fa-github"></i> View Code
+            </a>
+          </button>
+        </div>
+        <div class="card">
+          <img src="protfolio/movie_rating.png" alt="movie_rating screenshoot">
+          <h3>Movie Rating App</h3>
+
+          <p>A JavaScript app where users can add and rate their favorite movies.</p>
+          <button class="git_btn">
+            <a href="https://github.com/HodaHesham876/Myrebo1.git" target="_blank">
+              <i class="fa-brands fa-github"></i> View Code
+            </a>
+          </button>
+        </div>
+        <div class="card">
+          <img src="protfolio/student_grade_report.png" alt="movie_rating screenshoot">
+          <h3>Login System</h3>
+          <p>A simple front-end login system using HTML, CSS, and JavaScript for UI practice.</p>
+          <button class="git_btn">
+            <a href="https://github.com/HodaHesham876/Myrebo1.git" target="_blank">
+              <i class="fa-brands fa-github"></i> View Code
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <div class="about-container">
+      <h2>Resume</h2>
+      <p>
+        <strong>Education:</strong><br>
+        Second year student of Information Systems - BIS Department<br><br>
+
+        <strong>Training:</strong><br>
+        Front-End Development at MSP & Trainee at NIT<br><br>
+
+        <strong>Skills:</strong><br>
+        HTML, CSS, JavaScript, Git, GUI Basics<br><br>
+
+        <strong>Tools:</strong><br>
+        VS Code, GitHub, Figma
+      </p>
+      <div class="btn">
+        <a href="https://drive.google.com/file/d/1XyluXU-yp2Mp0CSdNmjIhQsx5HRPXO03/view?usp=drivesdk"
+          target="_blank"></a>
+        <button>Download CV</button>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="about-container">
+      <h2>Contact Me</h2>
+      <p>I'd love to hear from you! Feel free to reach out using the following platforms:</p>
+      <div class="social-links">
+        <a href="mailto:Hoda.M.Hesham876@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/hoda-hesham-0314622b1"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/HodaHesham876"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+  <script>
+    const words = ["BIS student", "Front-end Developer", "NIT Trainee"];
+    let wordIndex = 0;
+    let letterIndex = 0;
+    const typingElement = document.querySelector(".typewriter span");
+
+    function type() {
+      if (letterIndex <= words[wordIndex].length) {
+        typingElement.textContent = words[wordIndex].substring(0, letterIndex);
+        letterIndex++;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(() => {
+          letterIndex = 0;
+          wordIndex = (wordIndex + 1) % words.length;
+          type();
+        }, 1500);
+      }
+    }
+
+    type();
+  </script>
+
+
+</body>
+
+</html>
